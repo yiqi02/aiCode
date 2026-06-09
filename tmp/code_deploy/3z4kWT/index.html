@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>极简任务记录</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>📋 任务记录</h1>
+    <!-- 输入区域：不超过20行的核心交互 -->
+    <div class="input-row">
+      <input type="text" id="taskInput" placeholder="输入新任务..." autofocus>
+      <button id="addBtn">➕ 添加</button>
+    </div>
+    <!-- 任务列表容器 -->
+    <ul id="taskList">
+      <!-- 动态列表由 JavaScript 渲染 -->
+    </ul>
+    <!-- 底部统计与操作，保持行数精简 -->
+    <div class="footer-actions">
+      <span id="taskCount">0 项任务</span>
+      <button id="clearBtn" title="清除所有已完成">🧹 清除已完成</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

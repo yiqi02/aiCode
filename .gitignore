@@ -1,3 +1,8 @@
+##自定义本地配置文件 防止敏感信息提交##
+application-local.yml
+
+
+
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar

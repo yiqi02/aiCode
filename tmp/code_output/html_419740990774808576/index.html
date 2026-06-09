@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易祺 · 个人博客</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            background: #fff;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: #0f172a;
+        }
+        .logo span {
+            color: #2563eb;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #334155;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .hero {
+            padding: 2.5rem 0 1.5rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .hero .sub {
+            color: #475569;
+            border-left: 4px solid #2563eb;
+            display: inline-block;
+            padding-left: 0.8rem;
+            font-size: 1.1rem;
+        }
+        .hero p {
+            max-width: 500px;
+            margin: 0.8rem auto 0;
+            color: #334155;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 1.8rem 0 2rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.2rem 1rem 1.5rem;
+            border: 1px solid #eef2f6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        }
+        .card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.3rem;
+        }
+        .card .date {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-bottom: 0.4rem;
+        }
+        .card p {
+            color: #334155;
+            font-size: 0.9rem;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 0.6rem;
+            font-weight: 500;
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .about {
+            background: #fff;
+            border-radius: 20px;
+            padding: 1.5rem 1.5rem 1.8rem;
+            margin: 1.2rem 0 2.5rem;
+            border: 1px solid #eef2f6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .about-text h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+        .about-text p {
+            color: #334155;
+            font-size: 0.95rem;
+        }
+        .stats {
+            display: flex;
+            gap: 1.2rem;
+            background: #f1f5f9;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-item .num {
+            font-weight: 700;
+            font-size: 1.4rem;
+            display: block;
+            color: #0f172a;
+        }
+        .stat-item .label {
+            font-size: 0.7rem;
+            color: #475569;
+            text-transform: uppercase;
+        }
+
+        footer {
+            margin-top: auto;
+            background: #fff;
+            border-top: 1px solid #e2e8f0;
+            padding: 1.2rem 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+        footer span {
+            color: #2563eb;
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+            .stats {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">✦ <span>易祺</span></div>
+            <ul class="nav-links">
+                <li><a href="#">文章</a></li>
+                <li><a href="#">项目</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <h1>写代码 · 记录思考</h1>
+            <div class="sub">前端开发者 / 偶尔摄影</div>
+            <p>探索 Web 美学与交互边界，用文字凝固灵感。这里是易祺的个人数字花园。</p>
+        </section>
+
+        <div class="blog-grid">
+            <article class="card">
+                <h3>CSS Container Queries</h3>
+                <div class="date">2025-03-12 · 5 分钟</div>
+                <p>利用容器查询实现真正组件级响应式，告别媒体查询的全局依赖…</p>
+                <a href="#">阅读全文 →</a>
+            </article>
+            <article class="card">
+                <h3>原生 JS 状态管理</h3>
+                <div class="date">2025-02-28 · 8 分钟</div>
+                <p>用 Proxy 和发布订阅模式实现轻量级 store，理解响应式原理。</p>
+                <a href="#">阅读全文 →</a>
+            </article>
+            <article class="card">
+                <h3>摄影日记 · 街头光影</h3>
+                <div class="date">2025-02-10 · 3 分钟</div>
+                <p>用 50mm 镜头捕捉城市中被忽略的几何与色彩，附调色思路。</p>
+                <a href="#">阅读全文 →</a>
+            </article>
+        </div>
+
+        <section class="about">
+            <div class="about-text">
+                <h2>👋 关于我</h2>
+                <p>非典型程序员，热爱前端美学。目前在杭州 remote，写博客、拍街景。</p>
+                <p style="margin-top:0.2rem;">📮 yiqi@example.me</p>
+            </div>
+            <div class="stats">
+                <div class="stat-item"><span class="num">23</span><span class="label">文章</span></div>
+                <div class="stat-item"><span class="num">7</span><span class="label">项目</span></div>
+                <div class="stat-item"><span class="num">1.2k</span><span class="label">订阅</span></div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 <span>易祺</span> · 由 ☕ 与好奇心驱动</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.card a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const title = this.closest('.card')?.querySelector('h3')?.innerText || '文章';
+                alert(`📖 你点击了「${title}」\n这是一个静态演示，没有实际页面跳转。`);
+            });
+        });
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert(`📍 导航到「${this.innerText}」 (演示站点)`);
+            });
+        });
+    </script>
+</body>
+</html>

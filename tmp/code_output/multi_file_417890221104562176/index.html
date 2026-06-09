@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>个人主页 · 记录</title>
+    <!-- 引用外部样式表 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 整个页面的容器 -->
+    <div class="page-wrapper">
+
+        <!-- 头部导航 + 简介 -->
+        <header class="site-header">
+            <div class="container header-flex">
+                <div class="brand">
+                    <h1 class="site-title">陈遥·记录</h1>
+                    <p class="site-subtitle">保持好奇，持续书写</p>
+                </div>
+                <nav class="main-nav" aria-label="主导航">
+                    <ul class="nav-list">
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#projects">项目</a></li>
+                        <li><a href="#blog">随记</a></li>
+                        <li><a href="#contact">联系</a></li>
+                    </ul>
+                </nav>
+                <!-- 移动端菜单按钮 (aria 辅助) -->
+                <button class="mobile-menu-toggle" aria-label="切换菜单" id="menuToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main>
+            <!-- 英雄区 / 个人简介 -->
+            <section class="hero-section" id="about">
+                <div class="container hero-grid">
+                    <div class="hero-text">
+                        <h2>👋 你好，我是陈遥</h2>
+                        <p>一名热爱生活与创造的前端学习者。我相信干净的代码和温暖的设计能带来更好的数字体验。这里记录着我的学习笔记、项目点滴以及一些随想。</p>
+                        <p>目前专注于 <strong>Web 开发 · 交互设计</strong>，持续探索中。</p>
+                        <a href="#projects" class="btn btn-primary">查看我的项目</a>
+                    </div>
+                    <div class="hero-image">
+                        <!-- 占位头像图片：使用 picsum 服务 -->
+                        <img src="https://picsum.photos/400/400?random=1" alt="陈遥的头像占位" class="avatar" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <!-- 项目展示 -->
+            <section class="projects-section" id="projects">
+                <div class="container">
+                    <h2 class="section-title">📁 项目</h2>
+                    <div class="projects-grid">
+                        <article class="project-card">
+                            <img src="https://picsum.photos/600/400?random=2" alt="项目一截图" loading="lazy">
+                            <div class="card-content">
+                                <h3>任务管理仪表板</h3>
+                                <p>使用原生 JavaScript 构建的看板应用，支持拖拽、本地存储与响应式布局。记录开发过程中的思考与重构笔记。</p>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <img src="https://picsum.photos/600/400?random=3" alt="项目二截图" loading="lazy">
+                            <div class="card-content">
+                                <h3>天气可视化工具</h3>
+                                <p>基于公开 API 获取实时天气数据，用 Chart.js (模拟原生实现) 展示温度趋势。这里记录了如何解析 JSON 与异步处理。</p>
+                                <span class="tag">API</span>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <img src="https://picsum.photos/600/400?random=4" alt="项目三截图" loading="lazy">
+                            <div class="card-content">
+                                <h3>个人主页 · 记录</h3>
+                                <p>就是这个页面啦。完全使用 Flexbox/Grid 构建，轻量无依赖，移动优先。包含了关于、项目、随记区块。</p>
+                                <span class="tag">CSS Grid</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 随记 / 博客  -->
+            <section class="blog-section" id="blog">
+                <div class="container">
+                    <h2 class="section-title">✍️ 最新随记</h2>
+                    <div class="blog-list">
+                        <article class="blog-item">
+                            <h3>《关于 Flexbox 与 Grid 的取舍》</h3>
+                            <p class="blog-meta">2025-03-12 · 3 分钟</p>
+                            <p>在实际布局中，何时用 Flexbox 何时用 Grid？这篇文章记录了我从混用到清晰划分的心得……</p>
+                            <a href="#" class="read-more">阅读更多</a>
+                        </article>
+                        <article class="blog-item">
+                            <h3>《构建个人主页的七个细节》</h3>
+                            <p class="blog-meta">2025-02-28 · 5 分钟</p>
+                            <p>从语义化 HTML 到无障碍、性能优化，记录这次搭建主页时注意到的实用细节。</p>
+                            <a href="#" class="read-more">阅读更多</a>
+                        </article>
+                        <article class="blog-item">
+                            <h3>《2025 年第一本书：设计中的设计》</h3>
+                            <p class="blog-meta">2025-01-10 · 2 分钟</p>
+                            <p>原研哉的经典，重新思考「白」与「空」。一些摘录与感悟。</p>
+                            <a href="#" class="read-more">阅读更多</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 联系 -->
+            <section class="contact-section" id="contact">
+                <div class="container">
+                    <h2 class="section-title">📬 联系我</h2>
+                    <p>如果你想交流技术、设计或随意聊聊，欢迎发邮件或通过下面方式找到我。</p>
+                    <div class="contact-links">
+                        <a href="mailto:chenyao@example.com" class="contact-item">📧 chenyao@example.com</a>
+                        <a href="#" class="contact-item">🐦 推特 / X</a>
+                        <a href="#" class="contact-item">💻 GitHub</a>
+                    </div>
+                    <!-- 一个简单的“打招呼”按钮，由 JavaScript 控制交互 -->
+                    <button class="btn btn-secondary" id="greetBtn">👋 打个招呼</button>
+                    <p id="greetMessage" class="greet-message" style="display: none;"></p>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer class="site-footer">
+            <div class="container footer-content">
+                <p>&copy; 2025 陈遥 · 记录. 用 ❤️ 与原生三件套构建。</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 引用外部脚本 -->
+    <script src="script.js"></script>
+</body>
+</html>

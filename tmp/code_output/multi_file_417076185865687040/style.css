@@ -1,0 +1,207 @@
+/* style.css — 极简任务记录样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+/* 卡片容器 */
+#app {
+  max-width: 540px;
+  width: 100%;
+  background: white;
+  border-radius: 28px;
+  padding: 1.8rem 1.5rem 1.5rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* 输入行 —— flex 布局 */
+.input-row {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 40px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s, background 0.2s;
+  outline: none;
+}
+
+#taskInput:focus {
+  border-color: #3b82f6;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+#addBtn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+#addBtn:hover {
+  background: #2563eb;
+}
+
+#addBtn:active {
+  transform: scale(0.96);
+}
+
+/* 任务列表 — 无多余装饰 */
+#taskList {
+  list-style: none;
+  margin: 0 0 1.2rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* 单个任务项 */
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #f9fafb;
+  padding: 0.65rem 0.9rem 0.65rem 1rem;
+  border-radius: 40px;
+  transition: background 0.15s, box-shadow 0.15s;
+  border: 1px solid #f1f5f9;
+}
+
+.task-item:hover {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+/* 自定义复选框 */
+.task-check {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #3b82f6;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #1e293b;
+  word-break: break-word;
+  padding: 0.1rem 0;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+/* 已完成任务：删除线 + 弱化 */
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* 删除按钮 */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.1rem 0.3rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+/* 底部统计与操作 */
+.footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.4rem;
+  border-top: 1px solid #eef2f6;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+#taskCount {
+  font-weight: 450;
+}
+
+#clearBtn {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  padding: 0.4rem 1rem;
+  border-radius: 40px;
+  color: #475569;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+#clearBtn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+/* 响应式微调 */
+@media (max-width: 480px) {
+  #app {
+    padding: 1.5rem 1rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .input-row {
+    flex-wrap: wrap;
+  }
+  #taskInput {
+    min-width: 0;
+  }
+  #addBtn {
+    padding: 0.7rem 1rem;
+  }
+}

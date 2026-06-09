@@ -1,0 +1,109 @@
+/* style.css —— 极简风格，完全响应式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #f6f9fc 0%, #e9f1f8 100%);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  padding: 1rem;
+}
+
+/* 卡片 —— 核心布局使用 flex + 圆润卡片 */
+.card {
+  max-width: 480px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border-radius: 48px 16px 48px 16px;
+  box-shadow: 0 20px 40px -12px rgba(0, 20, 40, 0.25),
+              0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1d2b3e;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.card p {
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 30ch;
+  margin-bottom: 1.8rem;
+  opacity: 0.8;
+}
+
+/* 按钮 —— 清晰可点 */
+#actionBtn {
+  background: #1d2b3e;
+  color: white;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 60px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.3px;
+}
+
+#actionBtn:hover {
+  background: #2c3e50;
+  transform: scale(1.02);
+}
+
+#actionBtn:active {
+  transform: scale(0.96);
+}
+
+/* 反馈区 —— 小巧精致 */
+#feedback {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #1d2b3e;
+  background: rgba(29, 43, 62, 0.06);
+  padding: 0.4rem 1.2rem;
+  border-radius: 40px;
+  min-height: 2.2rem;
+  line-height: 1.4;
+  transition: all 0.2s;
+  max-width: 100%;
+  word-break: break-word;
+  border: 1px solid transparent;
+}
+
+#feedback:not(:empty) {
+  border-color: rgba(29, 43, 62, 0.12);
+  background: rgba(29, 43, 62, 0.03);
+}
+
+/* 手机窄边适配 */
+@media (max-width: 480px) {
+  .card {
+    padding: 2rem 1.5rem;
+    border-radius: 32px 12px 32px 12px;
+  }
+  .card h1 {
+    font-size: 1.8rem;
+  }
+}

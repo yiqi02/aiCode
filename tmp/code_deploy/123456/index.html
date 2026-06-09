@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>任务记录网站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📝 我的任务记录</h1>
+  </header>
+  <main>
+    <section id="task-input">
+      <h2>添加新任务</h2>
+      <input type="text" id="task-text" placeholder="输入任务内容...">
+      <select id="task-priority">
+        <option value="低">低</option>
+        <option value="中" selected>中</option>
+        <option value="高">高</option>
+      </select>
+      <button id="add-task-btn">添加任务</button>
+    </section>
+    <section id="task-filters">
+      <button class="filter-btn active" data-filter="全部">全部</button>
+      <button class="filter-btn" data-filter="待完成">待完成</button>
+      <button class="filter-btn" data-filter="已完成">已完成</button>
+    </section>
+    <section id="task-list">
+      <h2>任务列表</h2>
+      <ul id="tasks"></ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 任务记录网站</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

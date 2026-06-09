@@ -8,10 +8,9 @@ import com.yy.aicode.annotation.AuthCheck;
 import com.yy.aicode.exception.BusinessException;
 import com.yy.aicode.exception.ErrorCode;
 import com.yy.aicode.model.entity.enums.UserRoleEnum;
-import com.yy.aicode.model.entity.user.User;
+import com.yy.aicode.model.entity.User;
 import com.yy.aicode.service.UserService;
 import jakarta.annotation.Resource;
-import jakarta.servlet.ServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -20,7 +19,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.mvc.condition.RequestConditionHolder;
 
 @Aspect //定义这是一个切面
 @Component
